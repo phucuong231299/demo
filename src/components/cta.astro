@@ -5,7 +5,7 @@ import Slider from "./slider.astro";
 
 <section class="hero-section__section bg-slate-300 rounded-lg dark:bg-gray-800">
   <div class="hero-section__text text-xl text-center  p-10">
-    <div id="particles-js" ></div>
+    <div class="main" id="particles-js" ></div>
     <h1 class="text-2xl font-bold dark:text-gray-300">TailWind</h1>
     <p>
       
@@ -67,8 +67,20 @@ import Slider from "./slider.astro";
     width: 103%;
    
   }
- 
-  
+  .main{
+
+    padding: 40px;
+    transition: 0.5s;
+    border-radius: 50%;
+    /* border: 1px solid ; */
+    box-shadow: 15px 20px 20px rgba(0,0,0,0.07),
+    15px 25px 10px rgba(0,0,0,0.05),
+    inset 10px 10px 10px rgba(0,0,0,0.08),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.651);
+}
+.main:hover{
+  border-radius: 100% 100% 65% 68% / 0% 0% 0% 0%;
+}
 </style>
 <script type="text/javascript" src="/particles.js"></script>
 <script type="text/javascript" src="/app.js"></script>
