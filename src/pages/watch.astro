@@ -1,0 +1,36 @@
+<watch>
+<div class="watch">
+    <div class="screen">
+
+    </div>
+</div>
+</watch>
+<style>
+    watch{
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        background-color: #f7f7f7;
+        font-family: 'Roboto', sans-serif;
+    }
+    .watch{
+       display: flex;
+       justify-content: center;
+       position: relative;
+       background-color: #f7f7f7;
+    }
+    .screen{
+       position: absolute;
+       width: 325px;
+       height: 400px;
+       border-radius: 92px;
+       background-color: #000;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+    img{
+        position: relative;
+        z-index: 3;
+    }
+</style>
