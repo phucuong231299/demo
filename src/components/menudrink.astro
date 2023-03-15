@@ -1,0 +1,57 @@
+<section class="mb-32 mt-20">
+   <div class="imgScroll">
+    <div>
+        <img src="2.jpg" alt="">
+        <img src="9.jpg" alt="">
+        <img src="3.jpg" alt="">
+        <img src="4.jpg" alt="">
+        <img src="5.jpg" alt="">
+        <img src="6.jpg" alt="">
+        <img src="7.jpg" alt="">
+        <img src="8.jpg" alt="">
+        <img src="1.jpg" alt="">
+        <img src="10.jpg" alt="">
+    </div>
+   </div>
+</section>
+<style>
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+        width: 100%;
+    }
+.imgScroll{
+    position: absolute;
+    left: 0;
+    padding: 60px 0;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+
+}
+.imgScroll div{
+    display: flex;
+    animation: animate 40s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(90rem);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.imgScroll div img{
+    margin: 0 25px;
+    max-width: 300px;
+    border: 10px solid transparent;
+    transition: 0.25s;
+}
+
+.imgScroll div img:hover{
+    opacity: 1;
+    filter: blur(0px);
+}
+</style>

@@ -1,0 +1,86 @@
+---
+import Container from "@components/container.astro";
+import Postlist from "@components/postlist.astro";
+import Layout from "@layouts/Layout.astro";
+import About from "@components/aboutme.astro";
+import { latestPosts } from "@utils/content";
+import Logo from "@components/logo.astro";
+import Logo2 from "@components/logo2.astro";
+import Header from "@components/header.astro";
+import Drink from "@components/menudrink.astro";
+import Introduce from "@components/intro.astro";
+import Progress from "@components/progressbar.astro";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+// const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+//   (a, b) =>
+//     new Date(b.frontmatter.publishDate).valueOf() -
+//     new Date(a.frontmatter.publishDate).valueOf()
+// );
+// console.log(posts[0].frontmatter.image);
+---
+
+<Layout title="Trang chủ">
+  <Container>
+    <main>
+      <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+        <!-- {
+          latestPosts
+            .slice(0, 1)
+            .map((post) => (
+              <Postlist post={post} aspect="landscape" preloadImage={true} />
+            ))
+        } -->
+        <div><Header></Header></div>
+        
+        <div><Logo></Logo></div>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+        
+        <!-- {
+          latestPosts
+            .slice(2)
+            .map((post) => <Postlist post={post} aspect="square" />)
+        } --><About></About>
+      </div> 
+      <div >
+         <Introduce></Introduce>
+      </div>
+      <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
+        <div><Logo2></Logo2></div>
+        <div>
+          <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+            Cà Phê NUBI
+            </h1>
+            <p class="text-lg mt-4 text-slate-600 max-w-xl">
+              Astroship is a starter template for startups, marketing websites & landing
+              pages.<wbr> Built with Astro.build and TailwindCSS. You can quickly create
+              any website with this starter.
+            </p>
+            <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+              Cà Phê NUBI
+              </h1>
+              <p class="text-lg mt-4 text-slate-600 max-w-xl">
+                Astroship is a starter template for startups, marketing websites & landing
+                pages.<wbr> Built with Astro.build and TailwindCSS. You can quickly create
+                any website with this starter.
+              </p>
+              <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+                Cà Phê NUBI
+                </h1>
+                <p class="text-lg mt-4 text-slate-600 max-w-xl">
+                  Astroship is a starter template for startups, marketing websites & landing
+                  pages.<wbr> Built with Astro.build and TailwindCSS. You can quickly create
+                  any website with this starter.
+                </p>
+        </div>
+      </div>
+      <div>
+        <Drink></Drink>
+      </div>
+      <div>
+        <Progress></Progress>
+      </div>
+    </main>
+  </Container>
+</Layout>

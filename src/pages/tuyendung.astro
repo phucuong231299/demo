@@ -1,0 +1,26 @@
+---
+import Container from "@components/container.astro";
+import Pagetitle from "@components/pagetitle.astro";
+import Postlist from "@components/postlist.astro";
+import Layout from "@layouts/Layout.astro";
+import Tuyendung from "@components/recruitment.astro";
+import { latestPosts } from "@utils/content";
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+// const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+//   (a, b) =>
+//     new Date(b.frontmatter.publishDate).valueOf() -
+//     new Date(a.frontmatter.publishDate).valueOf()
+// );
+---
+
+<Layout title="Tuyển dụng">
+  <Container>
+    <Pagetitle>
+      <Fragment slot="title">Tuyển dụng</Fragment>
+      <Fragment slot="desc">See all posts we have ever written.</Fragment>
+    </Pagetitle>
+    <main>
+        <Tuyendung></Tuyendung>
+    </main>
+  </Container>
+</Layout>

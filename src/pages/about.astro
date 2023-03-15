@@ -1,0 +1,33 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import { Image } from "@astrojs/image/components";
+import Pagetitle from "@components/pagetitle.astro";
+import Link from "@components/ui/link.astro";
+import Map from "@components/map.astro";
+import Toolbar from "@components/doctors/grid/Toolbar.astro";
+import Filters from "@components/doctors/grid/Filters.astro";
+import Grid from "@components/doctors/grid/Grid.astro";
+---
+
+<Layout title="thongtin">
+  <Container>
+    <Pagetitle>
+      <Fragment slot="title">Thông tin</Fragment>
+      <Fragment slot="desc">We are a small passionate team.</Fragment>
+    </Pagetitle>
+    <div id="doctors" x-data="doctors()"  x-intersect="activeStep = 'spy-1'">
+      <!-- <Toolbar /> -->
+
+      <!--Grid wrapper-->
+      <div class="py-10">
+          <div class="col-span-12 lg:col-span-9">
+            <!--Subgrid-->
+            <Grid />
+          </div>
+        </div>
+      </div>
+    <br><br>
+    <Map></Map>
+  </Container>
+</Layout>
